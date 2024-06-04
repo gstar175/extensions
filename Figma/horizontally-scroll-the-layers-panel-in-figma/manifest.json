@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Horizontally scroll the layers panel in Figma",
+    "version": "0.1.1",
+    "description": "This extension for Figma allows horizontal scrolling in the layers panel. To scroll horizontally, move the mouse cursor to the layers panel area and use the touchpad or mouse wheel + Shift key. If it doesn't work the first time, try refreshing the page.",
+    "permissions": [
+      "activeTab"
+    ],
+    "icons": {
+      "16": "icons/ic-figsmiley-16.png",
+      "48": "icons/ic-figsmiley-48.png",
+      "128": "icons/ic-figsmiley-128.png"
+    },
+    "action": {
+      "default_icon": {
+        "16": "icons/ic-figsmiley-16.png",
+        "48": "icons/ic-figsmiley-48.png",
+        "128": "icons/ic-figsmiley-128.png"
+      },
+      "default_title": "Horizontally scroll the layers panel in Figma"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.figma.com/design/*"],
+        "css": ["styles.css"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  

@@ -20,9 +20,6 @@
     min-width: fit-content;
     /* min-width: 12.5rem !important; */
 }
-[class^="pages_panel--objectPanelContent"] [class^="objects_panel--rowContainer"] [class^="object_row--row"][class^="object_row--topLevel"] {
-    background-color: pink !important;
-}
 /* 讓 Action 按鈕可以釘在面板最右方，方便使用 */
 [class^="pages_panel--objectPanelContent"] [class^="objects_panel--rowContainer"] [class^="object_row--rowActions"] {
     position: sticky;

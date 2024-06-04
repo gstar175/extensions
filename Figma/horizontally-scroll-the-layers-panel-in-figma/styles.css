@@ -3,34 +3,37 @@ body div[class^="pages_panel--objectPanelContent"] [class^="scroll_container--sc
     overflow-x: scroll !important;
 }
 /* 讓圖層以及圖層名稱區塊的寬度可以隨其內容擴展 */
-body div[class^="pages_panel--objectPanelContent"] [data-testid="layer-row"], 
-body div[class^="pages_panel--objectPanelContent"] [data-testid="layer-row-with-children"] {
+body div[class^="pages_panel--objectPanelContent"] [class^="objects_panel--rowContainer"] [data-testid="layer-row"], 
+body div[class^="pages_panel--objectPanelContent"] [class^="objects_panel--rowContainer"] [data-testid="layer-row-with-children"] {
     min-width: fit-content;
 }
-body div[class^="pages_panel--objectPanelContent"] [class^="object_row--rowText"] {
+body div[class^="pages_panel--objectPanelContent"] [class^="objects_panel--rowContainer"] [class^="object_row--rowText"] {
     width: auto !important;
     min-width: fit-content;
 }
-body div[class^="pages_panel--objectPanelContent"] [class^="object_row--rowName"] {
+body div[class^="pages_panel--objectPanelContent"] [class^="objects_panel--rowContainer"] [class^="object_row--rowName"] {
     min-width: fit-content;
 }
 /* 重新命名時，讓 Input 至少有可用的寬度 */
-body div[class^="pages_panel--objectPanelContent"] [class^="object_row--row"] input[type="text"] {
+body div[class^="pages_panel--objectPanelContent"] [class^="objects_panel--rowContainer"] [class^="object_row--row"] input[type="text"] {
     width: auto !important;
     min-width: fit-content;
     /* min-width: 12.5rem !important; */
 }
+body div[class^="pages_panel--objectPanelContent"] [class^="objects_panel--rowContainer"] [class^="object_row--row"][class^="object_row--topLevel"] {
+    background-color: pink !important;
+}
 /* 讓 Action 按鈕可以釘在面板最右方，方便使用 */
-body div[class^="pages_panel--objectPanelContent"] [class^="object_row--rowActions"] {
+body div[class^="pages_panel--objectPanelContent"] [class^="objects_panel--rowContainer"] [class^="object_row--rowActions"] {
     position: sticky;
     right: 0;
     padding-left: 0.25rem;
     background-color: var(--color-bg, #fff);
 }
 /* 圖層或父圖層被選取時，Action 按鈕的背景需要跟著做調整，兩種狀況用的背景色不同 */
-body div[class^="pages_panel--objectPanelContent"] [class^="object_row--row"][class*="selected"] [class^="object_row--rowActions"] {
+body div[class^="pages_panel--objectPanelContent"] [class^="objects_panel--rowContainer"] [class^="object_row--row"][class*="selected"] [class^="object_row--rowActions"] {
     background-color: var(--color-bg-selected, #daebf7);
 }
-body div[class^="pages_panel--objectPanelContent"] [class^="object_row--row"][class*="parentSelected"] [class^="object_row--rowActions"] {
+body div[class^="pages_panel--objectPanelContent"] [class^="objects_panel--rowContainer"] [class^="object_row--row"][class*="parentSelected"] [class^="object_row--rowActions"] {
     background-color: var(--color-bg-selected-secondary, #edf5fa);
 }
